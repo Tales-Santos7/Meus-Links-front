@@ -57,7 +57,7 @@
     const linksDiv = document.getElementById('links');
 
     async function fetchLinks() {
-      const res = await fetch('http://localhost:5000/api/links');
+      const res = await fetch('/api/links');
       const links = await res.json();
 
       linksDiv.innerHTML = '';

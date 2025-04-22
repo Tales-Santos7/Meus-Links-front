@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const linksContainer = document.getElementById('links'); // usa o ID certo!
   
     try {
-      const res = await fetch('http://localhost:5000/api/links');
+      const res = await fetch('/api/links');
       const links = await res.json();
   
       linksContainer.innerHTML = '';
