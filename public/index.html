@@ -87,7 +87,7 @@
         btnDel.onclick = async () => {
           const confirmar = confirm('Tem certeza que deseja excluir este link?');
           if (confirmar) {
-            await fetch(`/api/links/${link._id}`, { method: 'DELETE' });
+            await fetch(`https://links-tales.onrender.com/api/links/${link._id}`, { method: 'DELETE' });
             fetchLinks();
           }
         };
@@ -109,13 +109,13 @@
         const confirmar = confirm('Tem certeza que deseja atualizar este link?');
         if (!confirmar) return;
 
-        await fetch(`/api/links/${id}`, {
+        await fetch(`https://links-tales.onrender.com/api/links/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ title, url })
         });
       } else {
-        await fetch('/api/links', {
+        await fetch('https://links-tales.onrender.com/api/links', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ title, url })
