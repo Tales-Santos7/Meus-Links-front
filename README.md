@@ -11,7 +11,7 @@ Este é o painel de controle do projeto de página pessoal estilo *Linktree*, de
 ### Links
 
 * URL do site ativo: [🛜Acessa o projeto aqui💻](https://links-tales.vercel.app/)
-* [Front-end](https://github.com/Tales-Santos7/meus-Links-front-vercel)
+* [Front-end (Vercel)](https://github.com/Tales-Santos7/meus-Links-front-vercel)
 * [Back-end (Render)](https://github.com/Tales-Santos7/Meus-Links-back)
 
 ## Sobre esse Projeto
