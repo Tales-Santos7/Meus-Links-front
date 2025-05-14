@@ -6,7 +6,7 @@ Este é o painel de controle do projeto de página pessoal estilo *Linktree*, de
 
 ### Captura do projeto
 
-<img src="./public/painel-links.gif" alt="gif ou imagem do painel de controle do projeto de links Tales Santos">
+<img src="./public/painel-links.gif" alt="gif ou imagem do pinel de controle do projeto de links de Tales Santos">
 
 ### Links
 
