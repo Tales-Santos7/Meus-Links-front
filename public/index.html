@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,21 +12,26 @@
       color: #fff;
       padding: 2rem;
     }
+
     h1 {
       color: #ffc107;
     }
-    form, .link-item {
+
+    form,
+    .link-item {
       background: #222;
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
     }
+
     input {
       border-radius: 5px;
       padding: 0.5rem;
       margin: 0.3rem;
       width: 40%;
     }
+
     button {
       padding: 0.5rem;
       margin-left: 0.5rem;
@@ -34,16 +40,19 @@
       border: none;
       cursor: pointer;
     }
+
     .link-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .link-info {
       flex-grow: 1;
     }
   </style>
 </head>
+
 <body>
   <h1>Gerir Links</h1>
   <form id="form-link">
@@ -59,7 +68,7 @@
     const linksDiv = document.getElementById('links');
 
     async function fetchLinks() {
-      const res = await fetch('https://links-tales.onrender.com/api/links');
+      const res = await fetch('https://links-tales-3ns6.onrender.com/api/links');
       const links = await res.json();
 
       linksDiv.innerHTML = '';
@@ -87,7 +96,7 @@
         btnDel.onclick = async () => {
           const confirmar = confirm('Tem certeza que deseja excluir este link?');
           if (confirmar) {
-            await fetch(`https://links-tales.onrender.com/api/links/${link._id}`, { method: 'DELETE' });
+            await fetch(`https://links-tales-3ns6.onrender.com/api/links/${link._id}`, { method: 'DELETE' });
             fetchLinks();
           }
         };
@@ -109,13 +118,13 @@
         const confirmar = confirm('Tem certeza que deseja atualizar este link?');
         if (!confirmar) return;
 
-        await fetch(`https://links-tales.onrender.com/api/links/${id}`, {
+        await fetch(`https://links-tales-3ns6.onrender.com/api/links/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ title, url })
         });
       } else {
-        await fetch('https://links-tales.onrender.com/api/links', {
+        await fetch('https://links-tales-3ns6.onrender.com/api/links', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ title, url })
@@ -130,4 +139,5 @@
     fetchLinks();
   </script>
 </body>
+
 </html>
